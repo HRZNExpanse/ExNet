@@ -1,4 +1,4 @@
-rootProject.name = "expanse-worker-poc"
+rootProject.name = "ExNet"
 
 val kotlin_version: String by settings
 

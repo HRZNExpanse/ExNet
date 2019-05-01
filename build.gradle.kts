@@ -4,7 +4,7 @@ plugins {
     kotlin("jvm")
 }
 
-group = "be.bluexin"
+group = "com.hrznstudio"
 version = "1.0-SNAPSHOT"
 
 repositories {
