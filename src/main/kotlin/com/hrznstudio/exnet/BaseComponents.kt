@@ -19,6 +19,7 @@
 
 package com.hrznstudio.exnet
 
-@Deprecated("Use Artemis")
-interface Value
-// TODO: ByteArray serde
+import com.artemis.Component
+
+@Noarg
+data class NetworkSynced(var timeStamp: Long) : Component()

@@ -22,6 +22,7 @@ package com.hrznstudio.exnet
 import it.unimi.dsi.fastutil.ints.Int2ReferenceMap
 import it.unimi.dsi.fastutil.ints.Int2ReferenceOpenHashMap
 
+@Deprecated("Use Artemis")
 data class Entity internal constructor(
     val id: Int,
     private val components: Int2ReferenceMap<Value> = Int2ReferenceOpenHashMap()

@@ -30,6 +30,7 @@ import java.util.concurrent.CompletableFuture
 import java.util.concurrent.Future
 import kotlin.coroutines.coroutineContext
 
+@Deprecated("Use Artemis")
 object ComponentStore {
     private val logger = KotlinLogging.logger {}
 
@@ -47,6 +48,7 @@ object ComponentStore {
     }
 }
 
+@Deprecated("Use Artemis")
 object EntityStore {
     private val logger = KotlinLogging.logger {}
     private lateinit var writer: SendChannel<Update<*>>

@@ -2,6 +2,7 @@ import org.jetbrains.kotlin.gradle.tasks.KotlinCompile
 
 plugins {
     kotlin("jvm")
+    kotlin("plugin.noarg")
 }
 
 group = "com.hrznstudio"
@@ -23,6 +24,10 @@ dependencies {
 
     implementation("it.unimi.dsi", "fastutil", version("fastutil"))
 
+    implementation("net.onedaybeard.artemis", "artemis-odb", version("artemis"))
+    implementation("net.onedaybeard.artemis", "artemis-odb-serializer-kryo", version("artemis"))
+    implementation("net.onedaybeard.artemis", "artemis-odb-serializer-json", version("artemis"))
+
     implementation("com.github.javafaker", "javafaker", version("javafaker"))
     implementation("com.fasterxml.jackson.module", "jackson-module-kotlin", version("jackson"))
 
@@ -38,6 +43,10 @@ tasks.withType<KotlinCompile> {
         @Suppress("SuspiciousCollectionReassignment")
         freeCompilerArgs += listOf("-Xuse-experimental=kotlin.Experimental", "-XXLanguage:+InlineClasses")
     }
+}
+
+noArg {
+    annotation("com.hrznstudio.exnet.Noarg")
 }
 
 fun Project.version(name: String) = extra.properties["${name}_version"] as? String

@@ -7,6 +7,7 @@ pluginManagement {
         eachPlugin {
             when (requested.id.namespace) {
                 "org.jetbrains.kotlin" -> useVersion(kotlin_version)
+                "org.jetbrains.kotlin.plugin" -> useVersion(kotlin_version)
             }
         }
     }

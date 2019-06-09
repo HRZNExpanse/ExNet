@@ -28,6 +28,7 @@ import kotlin.reflect.KProperty
  * Component key structure.
  * @param T generic type for the value assigned to this key, used for typesafe access trough the store
  */
+@Deprecated("Use Artemis")
 data class Component<T : Value>(
     /**
      * Name for this component.
